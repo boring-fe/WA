@@ -1,0 +1,123 @@
+.header-block {
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.24);
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-bar {
+  display: flex;
+  position: relative;
+  left: 0px;
+  width: 100%;
+  max-width: 1180px;
+  justify-content: space-between;
+  height: 62px;
+  align-items: center;
+}
+
+.nav-bar_white {
+  background-color: white;
+  margin: 0;
+}
+
+.nav-bar__logo {
+  max-width: 100px;
+  margin: 0 40px;
+}
+
+.nav-bar__logo_snaex {
+  margin: 0 40px;
+}
+
+.nav-bar-items {
+  padding: 0;
+  margin-right: 40px;
+  display: flex;
+  justify-content: space-around;
+  max-width: 1024px;
+  height: 100%;
+  width: auto;
+  align-items: center;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  font-size: 15px;
+}
+.nav-bar-items .nav-bar-items__item {
+  margin-right: 40px;
+}
+
+.nav-bar-items__item a {
+  color: black;
+}
+
+.page-nav__controls {
+  display: none;
+}
+
+.toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  margin-right: 30px;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.toggle__bar {
+  width: 100%;
+  height: 3px;
+  background: black;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .nav-bar {
+    border: 1px solid red;
+    margin: 0 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-bar-items {
+    transition: transform 0.5s 0.2s;
+    transform-origin: top center;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    min-height: calc(100vh - 50px);
+    transform: scaleY(0);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    background-color: #fff;
+    z-index: 10;
+  }
+
+  .page-nav__controls {
+    display: flex;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .page-nav.page-nav_expand .toggle__bar:first-child {
+    transform-origin: center center;
+    transform: translateY(10px) rotate(45deg);
+  }
+}
+
+/*# sourceMappingURL=header.css.map */
