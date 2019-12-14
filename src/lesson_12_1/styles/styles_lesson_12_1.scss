@@ -1,0 +1,58 @@
+$housingColor: gray;
+$border-color: black;
+$text-color: white;
+$lamp-off-color: rgb(39, 34, 34);
+$active-color: lightblue;
+
+.traffic-lights {
+  margin: 10px auto;
+  border: 2px solid $border-color;
+
+  &__housing_gray {
+    height: 700px;
+    width: 300px;
+    background-color: $housingColor;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__header {
+    color: white;
+  }
+
+  &__lamp {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 1px solid $border-color;
+
+    &:active {
+      border: 2px solid $active-color;
+    }
+
+    &_red {
+      background-color: $lamp-off-color;
+    }
+
+    &_yellow {
+      background-color: $lamp-off-color;
+    }
+
+    &_green {
+      background-color: $lamp-off-color;
+    }
+  }
+
+  &__control-button {
+    width: 200px;
+    height: 60px;
+    border-radius: 25px;
+    border: 1px solid $border-color;
+
+    &:active {
+      border: 1px solid $active-color;
+    }
+  }
+}
