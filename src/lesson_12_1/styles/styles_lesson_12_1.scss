@@ -32,7 +32,7 @@ $active-color: lightblue;
       border: 2px solid $active-color;
     }
 
-    &_red {
+    &_red:active {
       background-color: $lamp-off-color;
     }
 

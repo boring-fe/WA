@@ -99,10 +99,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lesson_12_1_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_lesson_12_1_scss__WEBPACK_IMPORTED_MODULE_0__);
 
 var controlButton = document.querySelector(".traffic-lights__control-button");
-var red_lamp = document.getElementById("red_lamp"); // console.log(red_lamp);
-// red_lamp.onclick = function() {
-//   alert("asdfasd");
-// };
+var red_lamp = document.getElementById("red_lamp");
 
 controlButton.onclick = function () {
   console.log("asdasdas");
@@ -111,9 +108,7 @@ controlButton.onclick = function () {
 var lightButtons = document.querySelectorAll(".traffic-lights__lamp");
 var redButton = document.querySelector(".traffic-lights__lamp_red");
 var yellowButton = document.querySelector(".traffic-lights__lamp_yellow");
-var greenButton = document.querySelector(".traffic-lights__lamp_green"); // function clicked() {
-//   red_lamp.style.background = "rgba(242, 38, 19, 1)";
-// }
+var greenButton = document.querySelector(".traffic-lights__lamp_green");
 
 function clearColors() {
   redButton.style.backgroundColor = "rgb(39, 34, 34)";
@@ -124,8 +119,7 @@ function clearColors() {
 redButton.setAttribute("data-is-active", true);
 yellowButton.setAttribute("data-is-active", true);
 greenButton.setAttribute("data-is-active", true);
-console.log(redButton.getAttribute("data-is-active")); // function checkAttribute(button) {
-// }
+console.log(redButton.getAttribute("data-is-active"));
 
 redButton.onclick = function () {
   if (redButton.getAttribute("data-is-active")) {
@@ -150,10 +144,8 @@ greenButton.onclick = function () {
 
 controlButton.onclick = function () {
   clearColors();
-  redButton.removeAttribute("data-is-active", "false"); //   console.log(redButton.getAttribute("data-is-active"));
-
-  yellowButton.removeAttribute("data-is-active", "false"); //   console.log(yellowButton.getAttribute("data-is-active"));
-
+  redButton.removeAttribute("data-is-active", "false");
+  yellowButton.removeAttribute("data-is-active", "false");
   greenButton.removeAttribute("data-is-active", "false");
 };
 
