@@ -1,0 +1,84 @@
+.nav-bar {
+  width: 100%;
+  background-color: #ffff;
+  height: 80px;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+}
+.nav-bar-content {
+  width: 1140px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-bar-content-nav-block {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: stretch;
+}
+.nav-bar-content-nav-block-logo {
+  width: 30%;
+  background-image: url(../assets/img/matter.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.nav-bar-content-nav-block-list-items {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  letter-spacing: 2px;
+}
+.nav-bar-content-nav-block-list-items-item {
+  font-size: 12px;
+  color: #33333a;
+}
+.nav-bar-content-nav-block-list-items-item_active {
+  color: #ff5e1b;
+  font-size: 12px;
+}
+.nav-bar-content-account-block {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+}
+.nav-bar-content-account-block-username {
+  font-size: 12px;
+  color: #33333a;
+  margin: 0 25px;
+}
+.nav-bar-content-account-block-userphoto {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+.nav-bar-content-account-block-icons {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  width: 50%;
+  justify-content: space-evenly;
+}
+
+.arrow {
+  border: solid #33333a;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg) translateY(-3px);
+}
+.arrow_active {
+  border: solid #ff5e1b;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-135deg);
+}
+
+/*# sourceMappingURL=nav-bar.css.map */

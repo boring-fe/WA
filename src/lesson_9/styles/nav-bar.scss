@@ -1,0 +1,103 @@
+$nav-bar-background-color: #ffff;
+$width-of-the-page-content: 1140px;
+$nav-bar-item-color: #33333a;
+$nav-bar-item-color-active: #ff5e1b;
+$nav-bar-font-size: 12px;
+
+.nav-bar {
+  //layout parent nav-bar block on the page
+  width: 100%;
+  background-color: $nav-bar-background-color;
+  height: 80px;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+
+  &-content {
+    //content of the nav-bar
+    width: $width-of-the-page-content;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-nav-block {
+      //block with logo and navigation items
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: stretch;
+
+      &-logo {
+        width: 30%;
+        background-image: url(./assets/img/matter.png);
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      &-list-items {
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        letter-spacing: 2px;
+
+        &-item {
+          font-size: $nav-bar-font-size;
+          color: $nav-bar-item-color;
+
+          &_active {
+            color: $nav-bar-item-color-active;
+            font-size: $nav-bar-font-size;
+          }
+        }
+      }
+    }
+
+    &-account-block {
+      //block with info about user's account
+      width: 45%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      letter-spacing: 2px;
+
+      &-username {
+        font-size: $nav-bar-font-size;
+        color: $nav-bar-item-color;
+        margin: 0 25px;
+      }
+
+      &-userphoto {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+      }
+
+      &-icons {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        width: 50%;
+        justify-content: space-evenly;
+      }
+    }
+  }
+}
+
+.arrow {
+  border: solid $nav-bar-item-color;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg) translateY(-3px);
+
+  &_active {
+    border: solid $nav-bar-item-color-active;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-135deg);
+  }
+}

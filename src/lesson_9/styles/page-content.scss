@@ -1,0 +1,104 @@
+$width-of-the-page-content: 1140px;
+$page-content-header-font-size: 60px;
+$trade-item-background-color: #fcfcfc;
+$button-background-color: DarkSlateGray;
+$button-text-color: #ffffff;
+
+.page-content {
+  width: $width-of-the-page-content;
+  height: 100%;
+  margin: 0 auto;
+
+  &-section-header {
+    margin-top: 65px;
+    font-size: $page-content-header-font-size;
+    font-weight: normal;
+    height: 115px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 24px;
+  }
+
+  &-header-image {
+    background-image: url(./assets/img/journal-big-copy-5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 420px;
+  }
+
+  &-standard-blocks {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  &-large-block-item {
+    width: 750px;
+    height: 560px;
+    margin-top: 60px;
+  }
+
+  &-standard-block-item {
+    margin-top: 60px;
+    width: 361px;
+    height: 560px;
+    background-color: $trade-item-background-color;
+
+    &__image {
+      width: 100%;
+      height: 420px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &__description {
+      margin-top: 22px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    &__button {
+      width: 112px;
+      height: 40px;
+      background-color: $button-background-color;
+      color: $button-text-color;
+      border: none;
+      margin: 8px 229px 20px 20px;
+    }
+  }
+}
+
+.image-1 {
+  background-image: url(./assets/img/scarf-1.jpg);
+}
+
+.image-2 {
+  background-image: url(./assets/img/scarf-2.jpg);
+}
+
+.image-3 {
+  background-image: url(./assets/img/shoes-1.jpg);
+}
+
+.image-4 {
+  background-image: url(./assets/img/shoes-2-width2x.jpg);
+}
+
+.image-5 {
+  background-image: url(./assets/img/shoes-3.jpg);
+}
+
+.page-content-next-content-button {
+  background-color: $button-background-color;
+  color: $button-text-color;
+  width: 180px;
+  height: 40px;
+  margin: 40px auto;
+  border: none;
+  text-align: center;
+}

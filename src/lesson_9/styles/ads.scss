@@ -1,0 +1,19 @@
+$ads-color: #33333a;
+$ads-content-color: #ffffff;
+$ads-font-size: 12px;
+
+.ads {
+    height: 40px;
+    /*position: fixed;*/
+    background-color: $ads-color;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__text {
+        color: $ads-content-color;
+        font-size: $ads-font-size;
+    }
+}
