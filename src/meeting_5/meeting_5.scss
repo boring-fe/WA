@@ -1,0 +1,12 @@
+.block {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid green;
+  // background-color: transparent;
+  margin: 5px;
+
+  &:active {
+    border-color: aqua;
+  }
+}
