@@ -1,0 +1,19 @@
+$size: 100px;
+
+.cool-btn {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  height: $size;
+  width: $size;
+  border: 2px solid gray;
+
+  &:focus {
+    border: 2px solid blue;
+  }
+  &:disabled {
+    opacity: 0.7;
+  }
+}

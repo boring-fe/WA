@@ -1,0 +1,15 @@
+.lamp-element {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid rgb(117, 236, 117);
+  // background-color: transparent;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:active {
+    border: 2px solid rgb(32, 4, 70);
+  }
+}

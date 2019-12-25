@@ -1,4 +1,6 @@
 import "./meeting_5.scss";
+import "./button-dynamic";
+//------------------------------------------------------
 //function of creating some quantity of lamps
 let createBlock = quantity => {
   for (let i = 0; i < quantity; i++) {

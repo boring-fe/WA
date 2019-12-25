@@ -81,85 +81,29 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/meeting_5/button-dynamic.js":
-/*!*****************************************!*\
-  !*** ./src/meeting_5/button-dynamic.js ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var btn = document.createElement("button");
-console.log(btn);
-btn.style.background = "red";
-btn.textContent = "Call button!";
-var body = document.querySelector("body");
-body.appendChild(btn);
-
-/***/ }),
-
-/***/ "./src/meeting_5/meeting_5.js":
+/***/ "./src/lesson_13/lesson_13.js":
 /*!************************************!*\
-  !*** ./src/meeting_5/meeting_5.js ***!
+  !*** ./src/lesson_13/lesson_13.js ***!
   \************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _meeting_5_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./meeting_5.scss */ "./src/meeting_5/meeting_5.scss");
-/* harmony import */ var _meeting_5_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_meeting_5_scss__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _button_dynamic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./button-dynamic */ "./src/meeting_5/button-dynamic.js");
-/* harmony import */ var _button_dynamic__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_button_dynamic__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _lesson_13_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lesson_13.scss */ "./src/lesson_13/lesson_13.scss");
+/* harmony import */ var _lesson_13_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_lesson_13_scss__WEBPACK_IMPORTED_MODULE_0__);
 
- //------------------------------------------------------
-//function of creating some quantity of lamps
-
-var createBlock = function createBlock(quantity) {
-  for (var i = 0; i < quantity; i++) {
-    var div = document.createElement("div");
-    div.className = "block";
-    document.body.append(div);
-  }
-}; //function of asking of User: how many lamps he wants to create
-
-
-var quantityOfElements = function quantityOfElements() {
-  return parseInt(prompt("Enter a quantity of the lamps", "0"));
-}; //creating needed quantity of lamps
-
-
-var quantityElem = quantityOfElements();
-createBlock(quantityElem);
-var lamp = document.querySelectorAll("div.block");
-console.log(lamp); //functions of creating random color like rgb(0..255, 0..255, 0..255)
-
-function randomNumber255() {
-  return Math.floor(Math.random() * 255);
-}
-
-function getRandomColor() {
-  return "rgb(".concat(randomNumber255(), ", ").concat(randomNumber255(), ", ").concat(randomNumber255(), ")");
-} //assign a random color to the lamps
-
-
-var lamp1 = document.querySelectorAll("div.block");
-
-for (var i = 0; i < lamp1.length; i++) {
-  var randomColor = getRandomColor();
-  console.log(getRandomColor());
-  lamp1[i].style.backgroundColor = "randomColor"; //The problem is: the color doesn't assigns to the element.
-}
 
 /***/ }),
 
-/***/ "./src/meeting_5/meeting_5.scss":
+/***/ "./src/lesson_13/lesson_13.scss":
 /*!**************************************!*\
-  !*** ./src/meeting_5/meeting_5.scss ***!
+  !*** ./src/lesson_13/lesson_13.scss ***!
   \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -168,17 +112,17 @@ for (var i = 0; i < lamp1.length; i++) {
 
 /***/ }),
 
-/***/ 5:
+/***/ 6:
 /*!******************************************!*\
-  !*** multi ./src/meeting_5/meeting_5.js ***!
+  !*** multi ./src/lesson_13/lesson_13.js ***!
   \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! ./src/meeting_5/meeting_5.js */"./src/meeting_5/meeting_5.js");
+module.exports = __webpack_require__(/*! ./src/lesson_13/lesson_13.js */"./src/lesson_13/lesson_13.js");
 
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=meeting_5.js.map
+//# sourceMappingURL=lesson_13.js.map

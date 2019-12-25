@@ -81,85 +81,104 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/meeting_5/button-dynamic.js":
-/*!*****************************************!*\
-  !*** ./src/meeting_5/button-dynamic.js ***!
-  \*****************************************/
+/***/ "./src/lesson_12/buttons.js":
+/*!**********************************!*\
+  !*** ./src/lesson_12/buttons.js ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var btn = document.createElement("button");
-console.log(btn);
-btn.style.background = "red";
-btn.textContent = "Call button!";
-var body = document.querySelector("body");
-body.appendChild(btn);
+// const someButton = document.querySelectorAll(".my-btn");
+// console.dir(someButton);
+var buttons = document.querySelectorAll(".my-btn");
+var masterButton = document.querySelector(".master-btn");
+var colors = ["red", "green", "magenta", "rgba(0, 255, 255, 0.5)", "yellowgreen"];
+
+var getRandomNumber = function getRandomNumber(max) {
+  return Math.floor(Math.random() * max);
+};
+
+var getRandomColor = function getRandomColor() {
+  return "rgb(".concat(getRandomNumber(255), ", \n  ").concat(getRandomNumber(255), ", \n  ").concat(getRandomNumber(255), ")");
+};
+
+var toggleOn = function toggleOn(button, i) {
+  button.style.backgroundColor = getRandomColor();
+  button.style.transform = "translateX(".concat(100 * (i + 1), "%)");
+  button.style.transition = "all 0.5s";
+  button.setAttribute("data-is-active", true);
+};
+
+var toggleOff = function toggleOff(button) {
+  button.style.backgroundColor = "transparent";
+  button.style.transform = "translateX(0)";
+  button.style.transition = "all 0.2s";
+  button.removeAttribute("data-is-active");
+};
+
+masterButton.onclick = function () {
+  var isActive = masterButton.getAttribute("data-is-active");
+
+  for (var j = 0; j < buttons.length; j++) {
+    //   const button = buttons[i];
+    if (isActive) {
+      toggleOff(buttons[j]);
+    } else {
+      toggleOn(buttons[j], j);
+    }
+  }
+
+  if (isActive) {
+    masterButton.removeAttribute("data-is-active");
+  } else {
+    masterButton.setAttribute("data-is-active", true);
+  }
+
+  var _loop = function _loop(i) {
+    buttons[i].onclick = function () {
+      var button = buttons[i];
+
+      if (button.getAttribute("data-is-active")) {
+        toggleOff(button);
+      } else {
+        toggleOn(button, i);
+      }
+    };
+  };
+
+  for (var i = 0; i < buttons.length; i++) {
+    _loop(i);
+  }
+};
 
 /***/ }),
 
-/***/ "./src/meeting_5/meeting_5.js":
+/***/ "./src/lesson_12/lesson_12.js":
 /*!************************************!*\
-  !*** ./src/meeting_5/meeting_5.js ***!
+  !*** ./src/lesson_12/lesson_12.js ***!
   \************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _meeting_5_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./meeting_5.scss */ "./src/meeting_5/meeting_5.scss");
-/* harmony import */ var _meeting_5_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_meeting_5_scss__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _button_dynamic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./button-dynamic */ "./src/meeting_5/button-dynamic.js");
-/* harmony import */ var _button_dynamic__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_button_dynamic__WEBPACK_IMPORTED_MODULE_1__);
-
- //------------------------------------------------------
-//function of creating some quantity of lamps
-
-var createBlock = function createBlock(quantity) {
-  for (var i = 0; i < quantity; i++) {
-    var div = document.createElement("div");
-    div.className = "block";
-    document.body.append(div);
-  }
-}; //function of asking of User: how many lamps he wants to create
+/* harmony import */ var _lesson_12_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lesson_12.scss */ "./src/lesson_12/lesson_12.scss");
+/* harmony import */ var _lesson_12_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_lesson_12_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _buttons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./buttons */ "./src/lesson_12/buttons.js");
+/* harmony import */ var _buttons__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_buttons__WEBPACK_IMPORTED_MODULE_1__);
 
 
-var quantityOfElements = function quantityOfElements() {
-  return parseInt(prompt("Enter a quantity of the lamps", "0"));
-}; //creating needed quantity of lamps
-
-
-var quantityElem = quantityOfElements();
-createBlock(quantityElem);
-var lamp = document.querySelectorAll("div.block");
-console.log(lamp); //functions of creating random color like rgb(0..255, 0..255, 0..255)
-
-function randomNumber255() {
-  return Math.floor(Math.random() * 255);
-}
-
-function getRandomColor() {
-  return "rgb(".concat(randomNumber255(), ", ").concat(randomNumber255(), ", ").concat(randomNumber255(), ")");
-} //assign a random color to the lamps
-
-
-var lamp1 = document.querySelectorAll("div.block");
-
-for (var i = 0; i < lamp1.length; i++) {
-  var randomColor = getRandomColor();
-  console.log(getRandomColor());
-  lamp1[i].style.backgroundColor = "randomColor"; //The problem is: the color doesn't assigns to the element.
-}
 
 /***/ }),
 
-/***/ "./src/meeting_5/meeting_5.scss":
+/***/ "./src/lesson_12/lesson_12.scss":
 /*!**************************************!*\
-  !*** ./src/meeting_5/meeting_5.scss ***!
+  !*** ./src/lesson_12/lesson_12.scss ***!
   \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -168,17 +187,17 @@ for (var i = 0; i < lamp1.length; i++) {
 
 /***/ }),
 
-/***/ 5:
+/***/ 7:
 /*!******************************************!*\
-  !*** multi ./src/meeting_5/meeting_5.js ***!
+  !*** multi ./src/lesson_12/lesson_12.js ***!
   \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! ./src/meeting_5/meeting_5.js */"./src/meeting_5/meeting_5.js");
+module.exports = __webpack_require__(/*! ./src/lesson_12/lesson_12.js */"./src/lesson_12/lesson_12.js");
 
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=meeting_5.js.map
+//# sourceMappingURL=lesson_12.js.map

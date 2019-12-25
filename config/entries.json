@@ -16,5 +16,14 @@
   ],
   "meeting_5": [
     "./src/meeting_5/meeting_5.js"
+  ],
+  "lesson_13": [
+    "./src/lesson_13/lesson_13.js"
+  ],
+  "lesson_12": [
+    "./src/lesson_12/lesson_12.js"
+  ],
+  "meeting_6": [
+    "./src/meeting_6/meeting_6.js"
   ]
 }
