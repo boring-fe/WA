@@ -25,5 +25,8 @@
   ],
   "meeting_6": [
     "./src/meeting_6/meeting_6.js"
+  ],
+  "lesson_14": [
+    "./src/lesson_14/lesson_14.js"
   ]
 }
