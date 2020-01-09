@@ -34,5 +34,11 @@
   ],
   "lesson_15_hw": [
     "./src/lesson_15_hw/lesson_15_hw.js"
+  ],
+  "lesson_16": [
+    "./src/lesson_16/lesson_16.js"
+  ],
+  "lesson_16_hw": [
+    "./src/lesson_16_hw/lesson_16_hw.js"
   ]
 }
