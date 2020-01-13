@@ -1,5 +1,9 @@
+@mixin random-bgr() {
+  background-color: rgb(random(255), random(255), random(255));
+}
+
 body {
-  background-color: darkgreen;
+  @include random-bgr();
   display: flex;
   justify-content: center;
   align-items: center;

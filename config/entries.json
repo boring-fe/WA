@@ -40,5 +40,8 @@
   ],
   "lesson_16_hw": [
     "./src/lesson_16_hw/lesson_16_hw.js"
+  ],
+  "clock": [
+    "./src/clock/clock.js"
   ]
 }

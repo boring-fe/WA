@@ -1,4 +1,4 @@
-import "../common/lighterDinamic.scss";
+import "../lighterDinamic/lighterDynamic.scss";
 
 export class Lighter {
   constructor(mp = document.querySelector("body")) {
