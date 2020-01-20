@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/common/feed/feed.scss"],"names":[],"mappings":"AAAA,MAAM,gBAAgB,iBAAiB","file":"ajax.css","sourcesContent":[".feed{max-width:400px;min-height:100vh;border:1px solid green}\n"],"sourceRoot":""}

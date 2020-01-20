@@ -43,5 +43,11 @@
   ],
   "clock": [
     "./src/clock/clock.js"
+  ],
+  "meeting_7_hw": [
+    "./src/meeting_7_hw/meeting_7_hw.js"
+  ],
+  "ajax": [
+    "./src/ajax/ajax.js"
   ]
 }

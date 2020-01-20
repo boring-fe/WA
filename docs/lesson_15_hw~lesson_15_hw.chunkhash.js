@@ -34,36 +34,41 @@ function () {
     this.mountPoint = mountPoint;
     this.lampsCount = lampsCount;
     this.time = time;
-  } // render() {}
-
+  }
 
   _createClass(Garland, [{
-    key: "renderLights",
-    value: function renderLights() {
+    key: "render",
+    value: function render() {
+      var lamps = [];
+
       for (var i = 0; i < this.lampsCount; i++) {
         var lamp = new _lamp__WEBPACK_IMPORTED_MODULE_0__["Lamp"]_lamp__WEBPACK_IMPORTED_MODULE_0__["Lamp"](this.mountPoint);
         lamp.render();
+        this.lamp = lamp;
+        lamps.push(lamp);
       }
+
+      window.lamps = lamps;
     }
   }, {
-    key: "toggleOn",
-    value: function toggleOn() {
-      this.el.style.background = this.color;
-      this.active = true;
-    }
-  }, {
-    key: "toggleOff",
-    value: function toggleOff() {
-      this.el.style.background = "";
-      this.active = false;
-    }
-  }, {
-    key: "toggle",
-    value: function toggle() {
-      if (this.isActive) {
-        this.toggleOff();
-      } else {
-        this.toggleOn();
+    key: "start",
+    value: function start() {
+      var _this = this;
+
+      var mode = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+
+      if (mode == 1) {
+        this.render();
+        setInterval(function () {
+          for (var i = 0; i < _this.lampsCount; i++) {
+            lamps[i].toggle();
+          }
+        }, this.time);
+      } else if (mode == 2) {
+        this.render();
+        setInterval(function () {
+          lamps[Math.floor(Math.random() * _this.lampsCount)].toggle();
+        }, this.time * 0.00025);
       }
     }
   }]);
@@ -183,13 +188,13 @@ function () {
     key: "toggleOn",
     value: function toggleOn() {
       this.el.style.background = this.color;
-      this.active = true;
+      this.isActive = true;
     }
   }, {
     key: "toggleOff",
     value: function toggleOff() {
       this.el.style.background = "";
-      this.active = false;
+      this.isActive = false;
     }
   }, {
     key: "toggle",
@@ -291,20 +296,12 @@ var getRandomColor = function getRandomColor() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lesson_15_hw_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lesson_15_hw.scss */ "./src/lesson_15_hw/lesson_15_hw.scss");
 /* harmony import */ var _lesson_15_hw_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_lesson_15_hw_scss__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _common_lamp__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../common/lamp */ "./src/common/lamp/index.js");
-/* harmony import */ var _common_garland__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../common/garland */ "./src/common/garland/index.js");
-
+/* harmony import */ var _common_garland__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../common/garland */ "./src/common/garland/index.js");
 
 
 var mp = document.querySelector("body");
-var garland = new _common_garland__WEBPACK_IMPORTED_MODULE_2__["Garland"](mp);
-garland.renderLights(); // const lamps = [];
-// for (let i = 0; i < 50; i++) {
-//   const lamp = new Lamp(mp);
-//   lamp.render();
-//   lamps.push(lamp);
-// }
-// window.lamps = lamps;
+var garland = new _common_garland__WEBPACK_IMPORTED_MODULE_1__["Garland"](mp, 500, 1000);
+garland.start(2);
 
 /***/ }),
 
@@ -319,7 +316,7 @@ throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugi
 
 /***/ }),
 
-/***/ 18:
+/***/ 17:
 /*!************************************************!*\
   !*** multi ./src/lesson_15_hw/lesson_15_hw.js ***!
   \************************************************/
