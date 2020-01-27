@@ -1,0 +1,26 @@
+$test-frame-color: darkgreen;
+//colors
+$whole-page-background-color: #f8f8f8;
+$footer-color: #ffffff;
+$footer-hr-color: #f8f8f8;
+$footer-menu-color: #80818a;
+$item-color-active: #ff0079;
+$hr-color: #dfdfdf;
+$genre-color: #babbc3;
+$movie-name-color: #494c62;
+//fonts
+$main-font-family: "Source Sans Pro", sans-serif;
+//font-sizes
+$font-size-logo: 50px;
+$font-size-lower-menu: 30px;
+$font-size-copyright-social-box: 24px;
+$font-size-nav-item: 36px;
+$font-size-quantity-of-stars: 28px;
+$col-size: 25%;
+$movie-description: 35px;
+$font-size-logo: 60px;
+$font-size-main-movie-name: 90px;
+//sizes
+$main-width: 2800px;
+$movie-width: ($main-width / 5 + 4px);
+$content-width: ($main-width - 340px + 15px);

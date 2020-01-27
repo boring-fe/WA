@@ -49,5 +49,8 @@
   ],
   "ajax": [
     "./src/ajax/ajax.js"
+  ],
+  "final_project": [
+    "./src/final_project/final_project.js"
   ]
 }
