@@ -1,0 +1,183 @@
+.header {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  &_image {
+    width: 100%;
+    height: 100%;
+    background-image: url("./assets/featured-image-header.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  &__container_limited {
+    width: $content-width;
+    height: 100%;
+    margin: 0 auto;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__upper-elements {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__lower-elemwnts {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__site-logo {
+    font-size: $font-size-logo;
+    color: $footer-color;
+    margin-top: 41px;
+  }
+  &__upper-left-group {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__search-icon {
+    width: 36.8px;
+    height: 36.8px;
+    margin-top: 62px;
+    background-color: $footer-color;
+  }
+  &__login {
+    width: 220px;
+    height: 80px;
+    margin: 40px 20px 0 20px;
+    font-size: $font-size-quantity-of-stars;
+    border-radius: 5px;
+    background-color: transparent;
+    color: $footer-color;
+    border: none;
+    &:hover {
+      background-color: $item-color-active;
+    }
+  }
+  //   &__login:active {
+  //     border: 1px solid $item-color-active;
+  //   }
+  &__sign-up {
+    width: 220px;
+    height: 80px;
+    margin-top: 40px;
+    border-radius: 5px;
+    background-color: $item-color-active;
+    font-size: $font-size-quantity-of-stars;
+    color: $footer-color;
+    border-color: $item-color-active;
+    &:hover {
+      border: 1px solid $footer-color;
+      background-color: transparent;
+    }
+  }
+  &__lower-elemwnts {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+  }
+  &__lower-left-group {
+    display: flex;
+    flex-direction: column;
+  }
+  &__movie-name {
+    font-size: $font-size-main-movie-name;
+    color: $footer-color;
+  }
+  &__movie-info-group {
+    display: flex;
+    justify-content: flex-start;
+  }
+  &__movie-genre {
+    width: 410px;
+    text-align: justify;
+    opacity: 0.7;
+    font-size: $font-size-lower-menu;
+    color: $footer-color;
+    font-style: $main-font-family;
+  }
+  &__movie-point {
+    width: 30px;
+    text-align: justify;
+    opacity: 0.7;
+    font-size: $font-size-lower-menu;
+    color: $footer-color;
+    font-style: $main-font-family;
+  }
+  &__movie-duration {
+    width: 410px;
+    text-align: justify;
+    opacity: 0.7;
+    font-size: $font-size-lower-menu;
+    color: $footer-color;
+    font-style: $main-font-family;
+  }
+  &__movie-control-buttons {
+    display: flex;
+    margin-top: 60px;
+  }
+  &__movie-control-watch {
+    width: 320px;
+    height: 90px;
+    border-radius: 5px;
+    background-color: $item-color-active;
+    font-size: 32px;
+    color: $footer-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    margin-right: 30px;
+    &:hover {
+      border: 1px solid $footer-color;
+      background-color: transparent;
+    }
+  }
+  &__movie-view {
+    width: 254px;
+    height: 90px;
+    opacity: 0.9;
+    border-radius: 5px;
+    border: solid 3px $footer-color;
+    margin-right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    font-size: 32px;
+    color: $footer-color;
+    &:hover {
+      background-color: $item-color-active;
+      border: none;
+    }
+  }
+  &__movie-add {
+    width: 320px;
+    height: 90px;
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: 32px;
+    color: $footer-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    margin-right: 30px;
+    &:hover {
+      border-radius: 5px;
+      border: solid 3px $footer-color;
+    }
+  }
+  &__lower-right-group {
+    width: 424px;
+    height: 148px;
+    border-radius: 5px;
+    border: solid 2px rgba(255, 255, 255, 0.2);
+    background-color: rgba(73, 76, 98, 0.2);
+    transform: translateY(80px);
+  }
+}

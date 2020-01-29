@@ -1,0 +1,14 @@
+.page-container {
+  width: 100%;
+  background-color: $footer-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  font-family: $main-font-family;
+}
+.page-container_limited {
+  width: $main-width;
+  margin: 0 auto;
+  background-color: $whole-page-background-color;
+}
