@@ -91,17 +91,17 @@
   &__movie-info-group {
     display: flex;
     justify-content: flex-start;
+    width: 887px;
   }
   &__movie-genre {
-    width: 410px;
-    text-align: justify;
+    text-align: left;
     opacity: 0.7;
     font-size: $font-size-lower-menu;
     color: $footer-color;
     font-style: $main-font-family;
   }
   &__movie-point {
-    width: 30px;
+    margin: 0 10px;
     text-align: justify;
     opacity: 0.7;
     font-size: $font-size-lower-menu;
@@ -156,7 +156,7 @@
     }
   }
   &__movie-add {
-    width: 320px;
+    width: 50%;
     height: 90px;
     border-radius: 5px;
     background-color: transparent;
@@ -179,5 +179,54 @@
     border: solid 2px rgba(255, 255, 255, 0.2);
     background-color: rgba(73, 76, 98, 0.2);
     transform: translateY(80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+  }
+  &__rating-description {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__rating {
+    font-size: 30px;
+    color: #ffffff;
+  }
+  &__quantity-reviews {
+    font-size: 24px;
+    opacity: 0.5;
+    color: #ffffff;
+    margin-left: 15px;
+  }
+  &__visualization-of-the-stars {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__stars-visualization {
+    height: 40px;
+    width: 40px;
+    margin: 0 9px;
+    background-color: $item-color-active;
+  }
+  &__stars-quantity {
+    width: 51px;
+    height: 38px;
+    opacity: 1;
+    border-radius: 2px;
+    border: solid 2px #6d6767;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    &_number {
+      color: $footer-color;
+      font-size: 24px;
+      opacity: 1;
+      margin: 0 0;
+    }
   }
 }
