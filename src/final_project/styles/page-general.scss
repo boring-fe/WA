@@ -8,7 +8,7 @@
   font-family: $main-font-family;
 }
 .page-container_limited {
-  width: $main-width;
+  max-width: $main-width;
   margin: 0 auto;
   background-color: $whole-page-background-color;
 }
