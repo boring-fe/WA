@@ -8,6 +8,8 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script src="http://localhost:35729/livereload.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <title key="title"></title>
   </head>
   <body>
@@ -18,7 +20,10 @@
           <div class="header__upper-elements">
             <div class="header__site-logo">THEMOVIEBOX</div>
             <div class="header__upper-left-group">
-              <div class="header__search-icon"></div>
+              <img
+                class="header__search-icon"
+                src="./assets/icons/2x/outline_search_white_18dp.png"
+              />
               <button class="header__login">LOG IN</button>
               <button class="header__sign-up">SIGN UP</button>
             </div>
@@ -47,43 +52,74 @@
                 >
               </div>
               <div class="header__visualization-of-the-stars">
-                <div class="header__stars-visualization"></div>
-                <div class="header__stars-visualization"></div>
-                <div class="header__stars-visualization"></div>
-                <div class="header__stars-visualization"></div>
-                <div class="header__stars-visualization"></div>
+                <div class="header__stars-visualization">
+                  <i class="material-icons md-48">
+                    star
+                    </i>
+                </div>
+                <div class="header__stars-visualization">
+                  <i class="material-icons md-48">
+                    star
+                    </i>
+                </div>
+                <div class="header__stars-visualization">
+                  <i class="material-icons md-48">
+                    star
+                    </i>
+                </div>
+                <div class="header__stars-visualization">
+                  <i class="material-icons md-48">
+                    star_half
+                    </i>
+                </div>
+                <div class="header__stars-visualization">
+                  <i class="material-icons md-48">
+                    star_border
+                    </i>
+                </div>
 
                 <div class="header__stars-quantity">
                   <span class="header__stars-quantity_number">3.4</span>
                 </div>
-              </div>
+              </img>
             </div>
           </div>
         </div>
       </header>
 
       <div class="page-container_limited">
-        <nav class="navigation-panel">
-          <div class="navigation-panel__container">
-            <ul class="navigation-panel__list">
+        <nav class="navigation-panel page-nav" id="pageNav">
+          <div class="navigation-panel__container" > <!-- ! -->
+            <div class="page-nav-controls" >
+              <button class="page-nav-control toggle" id="toggle">MENU</button>
+              <button class="page-nav-control">THEMOVIEBOX</button>
+              <button class="page-nav-control">              
+                <img
+                class="header__search-icon"
+                src="./assets/icons/2x/outline_search_white_18dp.png"
+              /></button>
+            </div>
+  
+  
+            <ul class="navigation-panel__list" id="turn">
               <li class="navigation-panel__list-item">
-                <a href="#">Trending</a>
+                <a href="#" class="page-link">Trending</a>
               </li>
               <li class="navigation-panel__list-item">
-                <a href="#">Top Rated</a>
+                <a href="#" class="page-link">Top Rated</a>
               </li>
               <li class="navigation-panel__list-item">
-                <a href="#">New Arrivals</a>
+                <a href="#" class="page-link">New Arrivals</a>
               </li>
               <li
                 class="navigation-panel__dropdown navigation-panel__list-item"
               >
-                <a href="#" class="dropbtn">
+                <a href="#" class="dropbtn page-link">
                   Genre
                   <i class="arrow"></i
                 ></a>
                 <div
-                  class="navigation-panel__dropdown-content navigation-panel__dropdown-list"
+                  class="navigation-panel__dropdown-content navigation-panel__dropdown-list page-link"
                 >
                   <a href="#" class="navigation-panel__list-item">
                     Action
@@ -119,8 +155,16 @@
               </li>
             </ul>
             <div class="view-type">
-              <div class="view-type__window"></div>
-              <div class="view-type__list"></div>
+              <div class="view-type__window">
+                <i class="material-icons  md-48">
+                  view_module
+                  </i>
+              </div>
+              <div class="view-type__list">
+                <i class="material-icons  md-48">
+                  view_list
+                  </i>
+              </div>
             </div>
           </div>
           <div class="layout-buttons">
@@ -412,7 +456,7 @@
             </div>
           </div>
         </main>
-        <footer class="footer">
+        <footer class="footer"> 
           <div class="footer__content-box">
             <p class="footer__site-name">THEMOVIEBOX</p>
             <ul class="footer__lower-menu">
@@ -427,14 +471,28 @@
               Designed by Milan Houter. All rights reserved.
             </p>
             <div class="footer__social">
-              <div class="footer__social_icon_temp"></div>
-              <div class="footer__social_icon_temp"></div>
-              <div class="footer__social_icon_temp"></div>
-              <div class="footer__social_icon_temp"></div>
+              <div class="footer__social_icon footer__social_icon_facebook">
+                <img src="./assets/icons/95039-free-social-media-icons/free-social-media-icons/svg/Circle Grey/Facebook_1.svg" alt="">
+              </div>
+              <div class="footer__social_icon footer__social_icon_pinterest">
+                <img src="./assets/icons/95039-free-social-media-icons/free-social-media-icons/svg/Circle Grey/Pinterest_1.svg" alt="">
+              </div>
+              <div class="footer__social_icon">
+                <img src="./assets/icons/95039-free-social-media-icons/free-social-media-icons/svg/Circle Grey/Twitter_1.svg" alt="">
+              </div>
+              <div class="footer__social_icon">
+                <img src="./assets/icons/95039-free-social-media-icons/free-social-media-icons/svg/Circle Grey/Linkedin_1.svg" alt="">
+              </div>
             </div>
           </div>
         </footer>
       </div>
     </div>
+
+    <script>
+      toggle.addEventListener("click", () => {
+        turn.classList.toggle("page-nav_expand");
+      });
+</script>
   </body>
 </html>

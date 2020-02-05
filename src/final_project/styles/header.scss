@@ -41,10 +41,14 @@
     justify-content: flex-end;
   }
   &__search-icon {
-    width: 36.8px;
-    height: 36.8px;
+    width: 50px;
+    height: 50px;
     margin-top: 62px;
-    background-color: $footer-color;
+    color: rgba(255, 255, 255, 1);
+    // background-color: $footer-color;
+    // background: url("../assets/icons/search-24px.svg") no-repeat center;
+    // background-image: url("../assets/icons/search-24px.svg");
+    // background-size: contain;
   }
   &__login {
     width: 220px;
@@ -204,18 +208,20 @@
   &__visualization-of-the-stars {
     height: 50%;
     display: flex;
-    justify-content: center;
+    justify-content: stretch;
     align-items: center;
+    margin: 15px;
   }
   &__stars-visualization {
     height: 40px;
     width: 40px;
-    margin: 0 9px;
-    background-color: $item-color-active;
+    margin: 9px;
+    color: $item-color-active;
   }
   &__stars-quantity {
     width: 51px;
     height: 38px;
+    margin: 15px;
     opacity: 1;
     border-radius: 2px;
     border: solid 2px #6d6767;
@@ -230,4 +236,17 @@
       margin: 0 0;
     }
   }
+}
+
+.material-icons.md-18 {
+  font-size: 18px;
+}
+.material-icons.md-24 {
+  font-size: 24px;
+}
+.material-icons.md-36 {
+  font-size: 36px;
+}
+.material-icons.md-48 {
+  font-size: 48px;
 }

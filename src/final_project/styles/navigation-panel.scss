@@ -6,6 +6,7 @@
   flex-direction: row;
   justify-content: stretch;
   flex-wrap: nowrap;
+  position: relative;
   &__container {
     border-bottom: 2px solid $hr-color;
     width: 100%;
@@ -29,6 +30,8 @@
     color: $footer-menu-color;
     display: flex;
     align-items: center;
+    flex-grow: 1;
+    flex-shrink: 1;
     position: relative;
 
     &:hover {
@@ -94,13 +97,23 @@
   &__window {
     width: 42px;
     height: 42px;
-    background-color: $footer-menu-color;
     margin: 15px;
+    color: $item-color-active;
+    &:hover {
+      color: $movie-name-color;
+    }
   }
   &__list {
     width: 42px;
     height: 42px;
-    background-color: $footer-menu-color;
     margin: 15px;
+    color: $item-color-active;
+    &:hover {
+      color: $movie-name-color;
+    }
   }
+}
+
+.page-nav-controls {
+  display: none;
 }
