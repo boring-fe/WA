@@ -15,7 +15,7 @@
   <body>
     <div class="page-container">
       <header class="header">
-        <div class="header_image"></div>
+        <!-- <div class="header_image"></div> -->
         <div class="header__container_limited">
           <div class="header__upper-elements">
             <div class="header__site-logo">THEMOVIEBOX</div>
@@ -30,11 +30,15 @@
           </div>
           <div class="header__lower-elemwnts">
             <div class="header__lower-left-group">
-              <p class="header__movie-name">WRATH OF THE TITANS</p>
+              <div class="header_movie-name-wrapper">
+                <!-- <p class="header__movie-name">WRATH OF THE TITANS</p> -->
+              </div>
               <div class="header__movie-info-group">
-                <span class="header__movie-genre">
-                  Fantasy Animation Family
-                </span>
+                <div class="header__movie-genre-wrapper">
+                  <!-- <span class="header__movie-genre">
+                    Fantasy Animation Family
+                  </span>   -->
+                </div>
                 <p class="header__movie-point">&#124;</p>
                 <span class="header__movie-duration">Duration: 1h 52m</span>
               </div>
@@ -79,7 +83,7 @@
                 </div>
 
                 <div class="header__stars-quantity">
-                  <span class="header__stars-quantity_number">3.4</span>
+                  <!-- <span class="header__stars-quantity_number">3.4</span> -->
                 </div>
               </img>
             </div>
@@ -92,12 +96,16 @@
           <div class="navigation-panel__container" > <!-- ! -->
             <div class="page-nav-controls" >
               <button class="page-nav-control toggle" id="toggle">MENU</button>
-              <button class="page-nav-control">THEMOVIEBOX</button>
-              <button class="page-nav-control">              
-                <img
-                class="header__search-icon"
-                src="./assets/icons/2x/outline_search_white_18dp.png"
-              /></button>
+              <!-- <button class="page-nav-control">THEMOVIEBOX</button> -->
+              <div class="page-nav-control__left-group">
+                <button class="page-nav-control">LOG IN</button>
+                <button class="page-nav-control">SIGN UP</button>
+                  <button class="page-nav-control">              
+                  <img
+                  class="header__search-icon"
+                  src="./assets/icons/2x/outline_search_white_18dp.png"
+                /></button>
+            </div>
             </div>
   
   
@@ -153,6 +161,7 @@
                   </a>
                 </div>
               </li>
+
             </ul>
             <div class="view-type">
               <div class="view-type__window">
@@ -174,7 +183,8 @@
         </nav>
         <main class="main">
           <div class="movies">
-            <div class="movie">
+
+            <!-- <div class="movie">
               <div class="product">
                 <img
                   src="./assets/bitmap.jpg"
@@ -194,6 +204,7 @@
                 <p class="product__year">2017</p>
               </div>
             </div>
+
             <div class="movie">
               <div class="product">
                 <img
@@ -219,6 +230,7 @@
                 <p class="product__year">2017</p>
               </div>
             </div>
+
             <div class="movie">
               <div class="product">
                 <img
@@ -453,7 +465,7 @@
                 </div>
                 <p class="product__year">2017</p>
               </div>
-            </div>
+            </div> -->
           </div>
         </main>
         <footer class="footer"> 
@@ -489,10 +501,5 @@
       </div>
     </div>
 
-    <script>
-      toggle.addEventListener("click", () => {
-        turn.classList.toggle("page-nav_expand");
-      });
-</script>
   </body>
 </html>

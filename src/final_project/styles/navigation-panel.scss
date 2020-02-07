@@ -117,3 +117,12 @@
 .page-nav-controls {
   display: none;
 }
+.page-nav-control {
+  font-size: $font-size-nav-item;
+  &__left-group {
+    // transform: translateY(-5px);
+    transform: scale(0.9);
+    display: flex;
+    align-items: center;
+  }
+}

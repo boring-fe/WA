@@ -17,7 +17,7 @@
   position: relative;
   &:hover {
     transform: scale(1.05);
-    translate: all 5s ease-out;
+    translate: all 10s ease-in;
     cursor: pointer;
   }
 }
@@ -27,6 +27,9 @@
   display: flex;
   flex-direction: column;
   justify-content: stretch;
+  &__img {
+    height: 80%;
+  }
   &__description-genre {
     height: 100%;
     display: flex;
@@ -36,21 +39,47 @@
     padding: 34px 35px 41px 35px;
   }
   &__description-genre-wrapper {
-    width: 60%;
+    width: 65%;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    overflow: clip;
   }
   &__description {
     font-size: $movie-description;
     color: $movie-name-color;
     font-weight: bold;
-    width: 587px;
+    width: 100%;
+    height: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &:hover::after {
+      content: attr(data-title);
+      overflow: hidden;
+      white-space: normal;
+      position: absolute;
+      width: ($movie-width - 70px);
+      height: 140%;
+      left: 0;
+      top: -30%;
+      z-index: 5;
+      background-color: $whole-page-background-color;
+      font-size: $movie-description;
+      text-align: center;
+      padding: 5px 10px;
+      box-shadow: 0 2px 35px 0 rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
   &__genre {
     font-size: $font-size-lower-menu;
     color: $genre-color;
     width: 587px;
+    z-index: 0;
   }
   &__quantity-of-stars {
     width: 78px;
