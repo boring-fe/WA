@@ -117,9 +117,6 @@
   .header__container_limited {
     width: ($main-width - 1450px);
   }
-  // .header__lower-right-group {
-  //   transform: translateY(231px);
-  // }
   .movies {
     grid-column-gap: 20px;
     grid-row-gap: 20px;
@@ -148,9 +145,6 @@
   .header__container_limited {
     width: ($main-width - 1450px);
   }
-  // .header__lower-right-group {
-  //   transform: translateY(200px);
-  // }
   .movies {
     grid-column-gap: 20px;
     grid-row-gap: 25px;
@@ -179,9 +173,6 @@
   .header__container_limited {
     width: ($main-width - 1550px);
   }
-  // .header__lower-right-group {
-  //   transform: translateY(231px);
-  // }
   .header__rating {
     font-size: 28px;
   }
@@ -385,9 +376,6 @@
     &__container {
       width: 90%;
     }
-    // &__list {
-    //   width: 85%;
-    // }
   }
   .main {
     padding: 0;
@@ -407,7 +395,6 @@
     margin: 0;
     position: inherit;
     flex-grow: 1;
-    // width: 90%;
     height: 100%;
     z-index: 0;
 
@@ -419,7 +406,6 @@
   }
   .product {
     position: relative;
-
     width: 100%;
     z-index: 0;
     &__img {
@@ -428,17 +414,6 @@
     }
   }
 }
-
-// @media (min-width: 1025px) and (max-width: 1280px) {
-//   .header {
-//     display: none;
-//     visibility: hidden;
-//   }
-//   .navigation-panel {
-//     height: 100vh;
-//     flex-direction: column;
-//   } //CSS
-// }
 
 @media screen and (max-width: 992px) {
   .page-container {
@@ -458,6 +433,10 @@
     display: none;
     visibility: hidden;
   }
+  .header__search-icon {
+    width: 40px;
+    height: 40px;
+  }
   .navigation-panel {
     height: 100vh;
     transform: none;
@@ -475,12 +454,6 @@
       margin-left: 40px;
     }
   }
-  // .navigation-panel__container {
-  //   width: 100%;
-  // }
-  // .navigation-panel__list-item:first-child {
-  //   margin-left: 40px;
-  // }
   .page-nav-controls {
     display: flex;
     width: 100%;
@@ -489,10 +462,8 @@
     z-index: 10;
     background-color: black;
     color: white;
-    // position: fixed;
   }
   .page-nav-control {
-    // border: 1px solid white;
     border: none;
     background-color: black;
     border-radius: 5px;
@@ -555,13 +526,20 @@
     height: 917px;
   }
   .footer {
+    height: 500px;
+    justify-content: center;
     &__lower-menu {
       flex-direction: column;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: flex-end;
+      height: 400px;
     }
     &__site-name {
       transform: scale(0.5);
+    }
+    &__content-box {
+      padding: 44px 0;
+      height: 260px;
     }
   }
 }

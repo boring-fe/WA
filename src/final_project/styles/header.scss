@@ -27,10 +27,6 @@
     display: flex;
     justify-content: space-between;
   }
-  // &__lower-elemwnts {
-  //   display: flex;
-  //   justify-content: space-between;
-  // }
   &__site-logo {
     font-size: $font-size-logo;
     color: $footer-color;
@@ -45,10 +41,6 @@
     height: 50px;
     margin-top: 62px;
     color: rgba(255, 255, 255, 1);
-    // background-color: $footer-color;
-    // background: url("../assets/icons/search-24px.svg") no-repeat center;
-    // background-image: url("../assets/icons/search-24px.svg");
-    // background-size: contain;
   }
   &__login {
     width: 220px;
@@ -63,9 +55,6 @@
       background-color: $item-color-active;
     }
   }
-  //   &__login:active {
-  //     border: 1px solid $item-color-active;
-  //   }
   &__sign-up {
     width: 220px;
     height: 80px;
